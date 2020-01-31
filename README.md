@@ -40,29 +40,34 @@ Criar um script que sendo executado pela crontab do sistema, verifica a porcenta
 ### 2. Sincronizando o uso do log com várias threads
     
 O código disponibilizado no diretório Q2 se propõe a inicializar várias threads, cada uma tendo como responsabilidade logar uma mensagem na saída padrão. O código, no entanto possui uma série de limitações. Corrija-as a partir dos requisitos a seguir:
-    
-    2.1. O código é disponibilizado sem um arquivo Makefile. Crie um Makefile que permita a compilação do código sem erros através de um único comando **make** e a exclusão do binário gerado através de um comando **make clean** 
-    
-    2.2. O código, ao ser executado, mostra algumas mensagens fora de sincronia, com as threads interrompendo as mensagens umas das outras. Modifique o código de modo que cada thread imprima a mensagem do início ao fim, sem que outra thread interrompa a mensagem no meio.
-    
-    2.3. O código fornecido  imprime o resultado na saída padrão, modifique-o para que o log seja enviado para o syslog do linux.
+
+2.1. O código é disponibilizado sem um arquivo Makefile. Crie um Makefile que permita a compilação do código sem erros através de um único comando **make** e a exclusão do binário gerado através de um comando **make clean** 
+
+2.2. O código, ao ser executado, mostra algumas mensagens fora de sincronia, com as threads interrompendo as mensagens umas das outras. Modifique o código de modo que cada thread imprima a mensagem do início ao fim, sem que outra thread interrompa a mensagem no meio.
+   
+2.3. O código fornecido  imprime o resultado na saída padrão, modifique-o para que o log seja enviado para o syslog do linux.
 
 
 ### 3. Produtor-Consumidor em C++
 
 Implemente em C++ o seguinte cenário:
-    
-    1 - O programa conta com duas threads independentes: Produtora e Consumidora
-    2 - A thread Produtora deve ler o arquivo Q3/input.xml e enviar seu conteúdo para uma fila, de onde a thread Consumidora deve ler e imprimir na tela apenas o conteúdo que estiver dentro das tags <payload></payload>. É importante que seja usado um mecanismo de sincronização entre as threads para tratar as condições de corrida na região crítica.
+
+1 - O programa conta com duas threads independentes: Produtora e Consumidora
+
+2 - A thread Produtora deve ler o arquivo Q3/input.xml e enviar seu conteúdo para uma fila, de onde a thread Consumidora deve ler e imprimir na tela apenas o conteúdo que estiver dentro das tags <payload></payload>. É importante que seja usado um mecanismo de sincronização entre as threads para tratar as condições de corrida na região crítica.
     
 ### 4. Comunicação inter processos
 Imagine que precisamos ler imagens de uma câmera em tempo real e realizar um processamento para encontrar e recortar a placa do veículo da imagem. O código que faz a leitura da imagem e o que realiza o processamento **precisam rodar em processos diferentes**. Escreva um software em linguagem C que simula esse cenário, seguindo as instruções a seguir:
     
-    1 - A leitura da imagem da câmera pode ser feita a partir de uma câmera real (webcam) ou simulada pela leitura de um arquivo em disco com a imagem, a critério do candidato;
-    2 - O processo que recebe a imagem **não precisa fazer processamento nenhum**, apenas escrevê-la em disco em um novo arquivo;
-    3 - Defina um protocolo simples para controlar o envio da imagem entre os dois processos;
-    4 - O processo que faz a leitura e envio da imagem deve enviar uma mensagem para o processo que recebe, informando o tamanho da imagem a ser enviada
-    5 - A imagem deve ser enviada entre os processos através do mecanismo de IPC que o candidato julgar mais adequado. Não será aceito que a imagem seja escrita em disco e o path seja passado entre os processos, por uma questão de requisito temporal
+1 - A leitura da imagem da câmera pode ser feita a partir de uma câmera real (webcam) ou simulada pela leitura de um arquivo em disco com a imagem, a critério do candidato;
+
+2 - O processo que recebe a imagem **não precisa fazer processamento nenhum**, apenas escrevê-la em disco em um novo arquivo;
+
+3 - Defina um protocolo simples para controlar o envio da imagem entre os dois processos;
+
+4 - O processo que faz a leitura e envio da imagem deve enviar uma mensagem para o processo que recebe, informando o tamanho da imagem a ser enviada
+
+5 - A imagem deve ser enviada entre os processos através do mecanismo de IPC que o candidato julgar mais adequado. Não será aceito que a imagem seja escrita em disco e o path seja passado entre os processos, por uma questão de requisito temporal
 
 ---------
 Critérios avaliados
