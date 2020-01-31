@@ -40,12 +40,12 @@ Criar um script que sendo executado pela crontab do sistema, verifica a porcenta
 ### 2. Sincronizando o uso do log com várias threads
     
 O código disponibilizado no diretório Q2 se propõe a inicializar várias threads, cada uma tendo como responsabilidade logar uma mensagem na saída padrão. O código, no entanto possui uma série de limitações. Corrija-as a partir dos requisitos a seguir:
-
-2.1. O código é disponibilizado sem um arquivo Makefile. Crie um Makefile que permita a compilação do código sem erros através de um único comando **make** e a exclusão do binário gerado através de um comando **make clean** 
-
-2.2. O código, ao ser executado, mostra algumas mensagens fora de sincronia, com as threads interrompendo as mensagens umas das outras. Modifique o código de modo que cada thread imprima a mensagem do início ao fim, sem que outra thread interrompa a mensagem no meio.
-
-2.3. O código fornecido  imprime o resultado na saída padrão, modifique-o para que o log seja enviado para o syslog do linux.
+    
+    2.1. O código é disponibilizado sem um arquivo Makefile. Crie um Makefile que permita a compilação do código sem erros através de um único comando **make** e a exclusão do binário gerado através de um comando **make clean** 
+    
+    2.2. O código, ao ser executado, mostra algumas mensagens fora de sincronia, com as threads interrompendo as mensagens umas das outras. Modifique o código de modo que cada thread imprima a mensagem do início ao fim, sem que outra thread interrompa a mensagem no meio.
+    
+    2.3. O código fornecido  imprime o resultado na saída padrão, modifique-o para que o log seja enviado para o syslog do linux.
 
 
 ### 3. Produtor-Consumidor em C++
