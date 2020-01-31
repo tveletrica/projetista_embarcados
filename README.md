@@ -54,7 +54,7 @@ Implemente em C++ o seguinte cenário:
 
 1 - O programa conta com duas threads independentes: Produtora e Consumidora
 
-2 - A thread Produtora deve ler o arquivo Q3/input.xml e enviar seu conteúdo para uma fila, de onde a thread Consumidora deve ler e imprimir na tela apenas o conteúdo que estiver dentro das tags <payload></payload>. É importante que seja usado um mecanismo de sincronização entre as threads para tratar as condições de corrida na região crítica.
+2 - A thread Produtora deve ler o arquivo Q3/input.xml e enviar seu conteúdo para uma fila, de onde a thread Consumidora deve ler e imprimir na tela apenas o conteúdo que estiver dentro das tags `<payload></payload>`. É importante que seja usado um mecanismo de sincronização entre as threads para tratar as condições de corrida na região crítica.
     
 ### 4. Comunicação inter processos
 Imagine que precisamos ler imagens de uma câmera em tempo real e realizar um processamento para encontrar e recortar a placa do veículo da imagem. O código que faz a leitura da imagem e o que realiza o processamento **precisam rodar em processos diferentes**. Escreva um software em linguagem C que simula esse cenário, seguindo as instruções a seguir:
