@@ -33,7 +33,7 @@ O uso de testes unitários não é obrigatório, mas é incentivado e será cons
 É de escolha do canditado a IDE ou editor de textos preferido para codificação, com tudo, deve ser possível realizar o build completo da solução através de um terminal linux 
 
 ### 1. Script monitor de recursos
-Criar um script que sendo executado pela crontab do sistema, verifica a porcentagem de utilização de todas as partições (/dev/*), o uso de memória RAM e a temperatura dos cores do sistema e envia um e-mail de alerta para cada variável monitorada que estiver acima dos limites estabelecidos dentro do script. O programa também deve gerar um log* quando o uso estiver acima do normal. 
+Criar um script que sendo executado pela crontab do sistema, verifica a porcentagem de utilização de todas as partições (/dev/\*), o uso de memória RAM e a temperatura dos cores do sistema e envia um e-mail de alerta para cada variável monitorada que estiver acima dos limites estabelecidos dentro do script. O programa também deve gerar um log* quando o uso estiver acima do normal. 
 
 *Para gerar o log, considere que você não tem acesso ou permissão para configurar o rsyslog, dessa forma use o método de redirecionamento de saídas diretamente para o arquivo de log desejado.
 
