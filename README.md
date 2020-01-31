@@ -57,17 +57,17 @@ Implemente em C++ o seguinte cenário:
 2 - A thread Produtora deve ler o arquivo Q3/input.xml e enviar seu conteúdo para uma fila, de onde a thread Consumidora deve ler e imprimir na tela apenas o conteúdo que estiver dentro das tags `<payload></payload>`. É importante que seja usado um mecanismo de sincronização entre as threads para tratar as condições de corrida na região crítica.
     
 ### 4. Comunicação inter processos
-Imagine que precisamos ler imagens de uma câmera em tempo real e realizar um processamento para encontrar e recortar a placa do veículo da imagem. O código que faz a leitura da imagem e o que realiza o processamento **precisam rodar em processos diferentes**. Escreva um software em linguagem C que simula esse cenário, seguindo as instruções a seguir:
+Imagine que precisamos ler imagens de uma câmera em tempo real e realizar um processamento para encontrar e recortar a placa de um veículo presente na imagem. O código que faz a leitura da imagem (Processo 1) e o que realiza o processamento (Processo 2) **precisam rodar em processos diferentes**. Escreva um software em linguagem C que simula esse cenário, seguindo as instruções a seguir:
     
-1 - A leitura da imagem da câmera pode ser feita a partir de uma câmera real (webcam) ou simulada pela leitura de um arquivo em disco com a imagem, a critério do candidato;
+1 - A leitura da imagem da câmera pode ser feita a partir de uma câmera real (webcam) ou simulada pela leitura de um arquivo em disco com uma imagem qualquer, a critério do candidato;
 
-2 - O processo que recebe a imagem **não precisa fazer processamento nenhum**, apenas escrevê-la em disco em um novo arquivo;
+2 - O Processo 2 **não precisa fazer processamento nenhum** com a imagem recebida, apenas recebê-la e escrever em disco em um novo arquivo;
 
 3 - Defina um protocolo simples para controlar o envio da imagem entre os dois processos;
 
-4 - O processo que faz a leitura e envio da imagem deve enviar uma mensagem para o processo que recebe, informando o tamanho da imagem a ser enviada
+4 - O Processo 1 deve enviar uma mensagem para o processo que recebe, informando o tamanho da imagem a ser enviada, antes de enviá-la;
 
-5 - A imagem deve ser enviada entre os processos através do mecanismo de IPC que o candidato julgar mais adequado. Não será aceito que a imagem seja escrita em disco e o path seja passado entre os processos, por uma questão de requisito temporal
+5 - Devido a uma restrição temporal da aplicação, não é desejável que a imagem seja enviada através da escrita no disco, sendo necessário utilizar um mecanismo de IPC. O mecanismo a ser utilizado fica a critério do candidato. Não existe uma única escolha certa, mas a escolha de um mecanismo adequado para a situação proposta é parte da avaliação.
 
 ---------
 Critérios avaliados
@@ -92,3 +92,5 @@ Quando finalizado e pronto para envio, gere o(s) arquivo(s) de patch com os cód
 Envie os arquivos de patch gerados por e-mail ao responsável pela aplicação do teste (jobs@mobitbrasil.com.br). Com o git configurado para envio de e-mail, pode ser feito com:
 
     git send-email  
+
+Caso prefira, o candidato pode clonar este repositório e subir as soluções em sua própria conta do Bitbucket. Nesse caso, enviar o endereço do repositório com as soluções para o email (jobs@mobitbrasil.com.br). 
