@@ -65,7 +65,7 @@ Imagine que precisamos ler imagens de uma câmera em tempo real e realizar um pr
 
 3 - Defina um protocolo simples para controlar o envio da imagem entre os dois processos;
 
-4 - O Processo 1 deve enviar uma mensagem para o processo que recebe, informando o tamanho da imagem a ser enviada, antes de enviá-la;
+4 - O Processo 1 deve enviar uma mensagem para o Processo 2, informando o tamanho da imagem a ser enviada, antes de enviá-la;
 
 5 - Devido a uma restrição temporal da aplicação, não é desejável que a imagem seja enviada através da escrita no disco, sendo necessário utilizar um mecanismo de IPC. O mecanismo a ser utilizado fica a critério do candidato. Não existe uma única escolha certa, mas a escolha de um mecanismo adequado para a situação proposta é parte da avaliação.
 
