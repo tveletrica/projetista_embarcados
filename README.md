@@ -5,22 +5,21 @@ MOBIT - Teste de nível para Projetista de Sistemas Embarcados
 O teste consiste em desafios para avaliar o nível de conhecimento do candidato em linguagens C e C++, desenvolvimento em Linux, programação paralela, comunicação interprocessos e conhecimentos de sistemas de computação.
 
 Tecnologias:
-*   Linux Ubuntu 18.04 ou compatível
-*   Linguagem C (gcc 7.4.0 ou superior)
-*	Linguagem C\+\+17 (g++ 7.4.0 ou superior)
-*	Controle de versão GIT;
+
+*  Linux Ubuntu 18.04 ou compatível
+*  Linguagem C (gcc 7.4.0 ou superior)
+*  Linguagem C\+\+17 (g++ 7.4.0 ou superior)
+*  Controle de versão GIT;
 
 ---------
 # Iniciando
 Projeto disponibilizado em: 
     
-    http://pdi.mobitbrasil.com.br:8601/projects/ANP/repos/projetista-sis-embarc
+    https://bitbucket.org/mobit-tecnologia/projetista-sis-embarc/src/master/
 
-Para realizar o teste, faça o clone do repositório em sua máquina local.  
- 
-    http://pdi.mobitbrasil.com.br:8601/scm/anp/projetista-sis-embarc.git
+Para realizar o teste, faça o clone do repositório em sua máquina local.
 
-Utilize o e-mail jobs@mobitbrasil.com.br para dúvidas e esclarecimentos.
+Utilize o e-mail hardware@mobit.com.br para dúvidas e esclarecimentos.
 
 
 ---------
@@ -57,7 +56,7 @@ Implemente em C++ o seguinte cenário:
 2 - A thread Produtora deve ler o arquivo Q3/input.xml e enviar seu conteúdo para uma fila, de onde a thread Consumidora deve ler e imprimir na tela apenas o conteúdo que estiver dentro das tags `<payload></payload>`. É importante que seja usado um mecanismo de sincronização entre as threads para tratar as condições de corrida na região crítica.
     
 ### 4. Comunicação inter processos
-Imagine que precisamos ler imagens de uma câmera em tempo real e realizar um processamento para encontrar e recortar a placa de um veículo presente na imagem. O código que faz a leitura da imagem (Processo 1) e o que realiza o processamento (Processo 2) **precisam rodar em processos diferentes**. Escreva um software em linguagem C que simula esse cenário, seguindo as instruções a seguir:
+Imagine que precisamos ler imagens de uma câmera em tempo real e realizar um processamento para encontrar e recortar a placa de um veículo presente na imagem. O código que faz a leitura da imagem (Processo 1) e o que realiza o processamento (Processo 2) **precisam rodar em processos diferentes**. Escreva um software em linguagem C/C++ que simula esse cenário, seguindo as instruções a seguir:
     
 1 - A leitura da imagem da câmera pode ser feita a partir de uma câmera real (webcam) ou simulada pela leitura de um arquivo em disco com uma imagem qualquer, a critério do candidato;
 
